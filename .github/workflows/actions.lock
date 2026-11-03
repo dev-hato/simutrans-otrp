@@ -4,25 +4,45 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/otrp-macos.yml':
+        - 'actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e'
         - 'actions/checkout@v2'
+        - 'actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2'
         - 'actions/upload-artifact@v2'
     '.github/workflows/otrp-ubuntu.yml':
+        - 'actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e'
         - 'actions/checkout@v1'
+        - 'actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2'
         - 'actions/upload-artifact@v2'
     '.github/workflows/otrp-windows-64.yml':
+        - 'actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e'
         - 'actions/checkout@v2'
+        - 'actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2'
         - 'actions/upload-artifact@v2'
+        - 'msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e'
         - 'msys2/setup-msys2@v2'
     '.github/workflows/otrp-windows.yml':
+        - 'actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e'
         - 'actions/checkout@v2'
+        - 'actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2'
         - 'actions/upload-artifact@v2'
+        - 'msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e'
         - 'msys2/setup-msys2@v2'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
 dependencies:
+    'actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e':
+        ref: 'v2.8.0'
+        commit: 'sha1-0717577d45739eb3c851188b29f50ed6c0b2194e'
+        owner_id: 44036562
+        repo_id: 197814629
     'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1':
         ref: 'v7.0.1'
         commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
+        owner_id: 44036562
+        repo_id: 197814629
+    'actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e':
+        ref: 'v1.2.0'
+        commit: 'sha1-50fbc622fc4ef5163becd7fab6573eac35f8462e'
         owner_id: 44036562
         repo_id: 197814629
     'actions/checkout@v1':
@@ -35,11 +55,21 @@ dependencies:
         commit: 'sha1-0717577d45739eb3c851188b29f50ed6c0b2194e'
         owner_id: 44036562
         repo_id: 197814629
+    'actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2':
+        ref: 'v2.3.1'
+        commit: 'sha1-82c141cc518b40d92cc801eee768e7aafc9c2fa2'
+        owner_id: 44036562
+        repo_id: 192625955
     'actions/upload-artifact@v2':
         ref: 'v2'
         commit: 'sha1-82c141cc518b40d92cc801eee768e7aafc9c2fa2'
         owner_id: 44036562
         repo_id: 192625955
+    'msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e':
+        ref: 'v2.33.0'
+        commit: 'sha1-ec48f7c5447b3140e2b088413ae3a55687bccb6e'
+        owner_id: 6759993
+        repo_id: 213203501
     'msys2/setup-msys2@v2':
         ref: 'v2'
         commit: 'sha1-ec48f7c5447b3140e2b088413ae3a55687bccb6e'
